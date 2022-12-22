@@ -6,7 +6,7 @@ class NetworkHandler {
   String url;
   NetworkHandler(this.url);
 
-  Future getData() async{
+  Future getData() async {
     http.Response response = await http.get(
       Uri.parse(
         url,
@@ -15,18 +15,10 @@ class NetworkHandler {
     if (response.statusCode == 200) {
       String data = response.body;
       return jsonDecode(data);
+    } else {
+      print('401');
 
-
-
-      // double temperature = decodedData['main']['temp'];
-      // int condition = decodedData['weather'][0]['id'];
-      // String cityName = decodedData['name'];
-      
-    }
-    else{
       print(response.statusCode);
     }
-
   }
-
 }
