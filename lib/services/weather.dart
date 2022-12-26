@@ -1,7 +1,10 @@
 import 'package:climate_app/services/location.dart';
 import 'package:climate_app/services/networking.dart';
 
-var apikey = '0dd18ad9ac21f7a43d99d32d8f805630';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+// var apikey = dotenv.env['APIKEY'];
+var apikey = dotenv.env['APIKEY'];
 
 class WeatherModel {
   Future<dynamic> getCityWeather(String cityName) async {

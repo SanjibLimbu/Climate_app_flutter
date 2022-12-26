@@ -2,8 +2,9 @@ import 'package:climate_app/screens/loading_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
-  // await dotenv.load(fileName: ".env");
+Future main() async {
+  await dotenv.load(fileName: ".env");
+
   runApp(
     const ClimateApp(),
   );
@@ -16,7 +17,7 @@ class ClimateApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark(),
-      home: LoadingScreen(),
+      home: const LoadingScreen(),
     );
   }
 }

@@ -1,11 +1,9 @@
 import 'package:climate_app/screens/location_screen.dart';
-import 'package:climate_app/services/location.dart';
+
 import 'package:climate_app/services/weather.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-// var apikey = dotenv.env['APIKEY'];
-var apikey = '0dd18ad9ac21f7a43d99d32d8f805630';
 
 class LoadingScreen extends StatefulWidget {
   const LoadingScreen({super.key});
@@ -24,7 +22,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
 
   void getLocationData() async {
     WeatherModel weatherModel = WeatherModel();
-    var weatherData =  await weatherModel.getLocationWeather();
+    var weatherData = await weatherModel.getLocationWeather();
 
     // ignore: use_build_context_synchronously
     Navigator.push(
