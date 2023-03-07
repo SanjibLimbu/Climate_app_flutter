@@ -1,6 +1,6 @@
 # climate_app
 
-A new Flutter project.
+Udemy course
 
 ## Getting Started
 
